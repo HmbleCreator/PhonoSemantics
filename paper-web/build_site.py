@@ -10,7 +10,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_DIR = Path(__file__).resolve().parent
-TEX_PATH = ROOT / "phonosemantic_zenodo.tex"
+TEX_PATH = SITE_DIR / "downloads" / "phonosemantic_zenodo.tex"
 BIB_PATH = SITE_DIR / "references.bib"
 README_PATH = ROOT / "README.md"
 OUTPUT_PATH = SITE_DIR / "index.html"
