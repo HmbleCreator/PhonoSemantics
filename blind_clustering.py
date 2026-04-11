@@ -98,7 +98,7 @@ for cluster_id in range(5):
     for g in GROUP_ORDER:
         bar = '█' * group_counts.get(g, 0)
         print(f"  {g:<10}: {group_counts.get(g,0):2d} {bar}")
-    print(f"  → Dominant: {dominant[0]} ({dominant[1]}/{mask.sum()})")
+    print(f"  -> Dominant: {dominant[0]} ({dominant[1]}/{mask.sum()})")
 
 # Step 6: Effect size
 z_score = (real_ari - perm_ari.mean()) / perm_ari.std() if perm_ari.std() > 0 else 0

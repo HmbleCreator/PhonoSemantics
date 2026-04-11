@@ -389,7 +389,7 @@ for g in groups:
     axis_name = GROUP_PREDICTED_AXIS[g]
     sig = '✓' if pval < 0.05 else '✗'
     
-    print(f"\n  {g} → predicted: {axis_name[:25]}")
+    print(f"\n  {g} -> predicted: {axis_name[:25]}")
     print(f"    n roots = {len(group_roots)}")
     print(f"    pred_score mean  = {np.mean(pred_scores):.4f}")
     print(f"    other_score mean = {np.mean(other_scores):.4f}")
@@ -458,7 +458,7 @@ for g in groups:
     gc = sum(1 for r in group_roots if r['correct'])
     print(f"    {g:10s}: {gc}/{len(group_roots)} ({gc/len(group_roots):.0%})")
     for r in group_roots:
-        marker = '✓' if r['correct'] else f"→{r['primary_axis'][:12]}"
+        marker = '[YES]' if r['correct'] else f"->{r['primary_axis'][:12]}"
         print(f"      {r['root']:12s} {marker}")
 
 # ─────────────────────────────────────────────────────────────────────────────

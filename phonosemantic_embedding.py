@@ -269,14 +269,14 @@ class PhonosematicTrajectory:
         """Human-readable analysis of the word's phonosemantic trajectory."""
         lines = [f"\n{'─'*50}",
                  f"Word: {self.word}",
-                 f"Phonemes: {' → '.join(self.phonemes)}",
+                 f"Phonemes: {' -> '.join(self.phonemes)}",
                  f"{'─'*50}"]
         for d in self.descriptors:
             vowel_mark = " [vowel: energy carrier]" if d.is_vowel else " [consonant: form carrier]"
             lines.append(f"  {repr(d)}{vowel_mark}")
         lines.append(f"{'─'*50}")
-        lines.append(f"Locus path:     {' → '.join(self.locus_sequence())}")
-        lines.append(f"Resonance path: R{' → R'.join(str(r) for r in self.resonance_sequence())}")
+        lines.append(f"Locus path:     {' -> '.join(self.locus_sequence())}")
+        lines.append(f"Resonance path: R{' -> R'.join(str(r) for r in self.resonance_sequence())}")
         lines.append(f"Resonance center: R{self.resonance_center():.1f}")
         return '\n'.join(lines)
 
@@ -561,14 +561,14 @@ def demo():
                                'prana',  ['p', 'r', 'aa', 'N'], mode='root')
     print(f"\npavana vs prana (both labial root):")
     print(f"  H = {H1:.4f}  |  H_L={b1['H_L (locus)']:.3f}, H_A={b1['H_A (manner)']:.3f}, H_R={b1['H_R (resonance)']:.3f}")
-    print(f"  → Same labial root, similar resonance: expect HIGH")
+    print(f"  -> Same labial root, similar resonance: expect HIGH")
 
     # Cross-locus — should have LOW coherence
     H2, b2 = embed.similarity('prana', ['p', 'r', 'aa', 'N'],
                                'karma', ['k', 'a', 'r', 'm', 'a'], mode='root')
     print(f"\nprana vs karma (labial vs throat root):")
     print(f"  H = {H2:.4f}  |  H_L={b2['H_L (locus)']:.3f}, H_A={b2['H_A (manner)']:.3f}, H_R={b2['H_R (resonance)']:.3f}")
-    print(f"  → Different locus + resonance: expect LOWER")
+    print(f"  -> Different locus + resonance: expect LOWER")
 
     # Same root family — pavana, pavaka, prana (all pa-varga)
     print(f"\n── PA-VARGA ROOT FAMILY ──")
