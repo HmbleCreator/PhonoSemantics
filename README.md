@@ -2,8 +2,8 @@
 
 **Official code repository for:**
 
-> Kumar, A. (2026). *Phonosemantic Grounding: Sanskrit as a Formalized Case of Motivated Sign Structure for Interpretable AI*. Zenodo.
-> DOI: [10.5281/zenodo.19508958](https://doi.org/10.5281/zenodo.19508958)
+> Kumar, A. (2026). *Phonosemantic Grounding: Sanskrit as a Formalized Case of Motivated Sign Structure for Interpretable AI* (Version 2.0). Zenodo.
+> DOI: [10.5281/zenodo.19564026](https://doi.org/10.5281/zenodo.19564026)
 
 ---
 
@@ -17,7 +17,9 @@ The paper proposes that the articulatory anatomy of speech production — the fi
 
 ## Repository contents
 
-| File | What it does |
+The main repository contains the core scripts for Phase 1-3 validation. The newly added `/Experiments` folder contains all exploratory tracking from Phase 4 (Formant Grounding) and Phase 5 (Neuromorphic SNN constraints).
+
+| File/Folder | What it does |
 |---|---|
 | `phonosemantic_embedding.py` | The core embedding layer. Replaces `nn.Embedding` with a 10-dimensional physically grounded coordinate system derived from articulatory anatomy. Importable module. |
 | `experiment_v3.py` | Canonical root clustering experiment. 150 Sanskrit verbal roots, 5 phonological groups, 3 statistical tests (Wilcoxon, Mann-Whitney, multinomial classification). All semantic scores derived independently from Monier-Williams dictionary definitions. Reproduces the main results in Section 9 of the paper. |
@@ -25,6 +27,7 @@ The paper proposes that the articulatory anatomy of speech production — the fi
 | `blind_clustering.py` | Blind clustering experiment. Automatic TF-IDF semantic clustering with permutation test — no manual axis labels. Reproduces the null result reported honestly in Section 9.5. |
 | `make_figure.py` | Generates Figure 1: the phonosemantic manifold map (phonemes in locus × manner space with word trajectory overlays). Requires matplotlib. |
 | `phonosemantic_figure.png` | Figure 1 from the paper — pre-generated for convenience. |
+| `/Experiments` | Contains Phase 4 (Continuous Formant Grounding) and Phase 5 (SNN simulations including Epileptiform Synchrony limit). |
 
 ---
 
@@ -110,6 +113,8 @@ Every phoneme maps to a 10-dimensional vector:
 | Linear probe — phoneme identity baseline | 49.3% ± 6.8% |
 | Linear probe — geometry advantage | +14.0 percentage points, p < 0.001 |
 | Blind TF-IDF clustering | ARI = 0.007, p = 0.143 (not significant — reported in full) |
+| Phase 4: Acoustic Formant Grounding (Sec 10) | ARI = 0.0366 via unsupervised F1/F2 continuous clustering. |
+| Phase 5: SNN Validation Limit (Sec 11) | Epileptiform Synchrony Limit identified at ~500 Hz when modeling temporal context extension. |
 
 ---
 
@@ -122,9 +127,9 @@ Every phoneme maps to a 10-dimensional vector:
                of Motivated Sign Structure for Interpretable {AI}},
   year      = {2026},
   publisher = {Zenodo},
-  version   = {1.0},
-  doi       = {10.5281/zenodo.19508958},
-  url       = {https://doi.org/10.5281/zenodo.19508958}
+  version   = {2.0},
+  doi       = {10.5281/zenodo.19564026},
+  url       = {https://doi.org/10.5281/zenodo.19564026}
 }
 ```
 
