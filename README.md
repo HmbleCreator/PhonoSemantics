@@ -2,13 +2,9 @@
 
 **Official code repository for:**
 
-<<<<<<< HEAD
 > Kumar, A. (2026). *Phonosemantic Grounding: Sanskrit as a Formalized Case of Motivated Sign Structure for Interpretable AI* (Version 2.0). Zenodo.
 > DOI: [10.5281/zenodo.19564026](https://doi.org/10.5281/zenodo.19564026)
-=======
-> Kumar, A. (2026). *Phonosemantic Grounding: Sanskrit as a Formalized Case of Motivated Sign Structure for Interpretable AI*. Zenodo.
-> DOI: [10.5281/zenodo.19508957](https://doi.org/10.5281/zenodo.19508957)
->>>>>>> 82dd80f82021287f5b49546d6d25568743521a2b
+
 
 ---
 
