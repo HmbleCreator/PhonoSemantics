@@ -64,6 +64,30 @@ All scripts are self-contained and print results to stdout. No GPU required. Run
 
 ---
 
+## Phase 4 & Phase 5 Extensions (Version 2.0)
+
+The `Experiments/` directory contains the complete chronological chain of advanced empirical validation modeling corresponding to Sections 10 and 11 of the Version 2.0 manuscript.
+
+| Script | Phase | What it does |
+|---|---|---|
+| `ddin_exp09_phonosemantic.py` | Bridge | Tests initial bridge between Sanskrit root phonemes and DDIN architecture. |
+| `ddin_exp12_benchmark_grounded.py` | Bridge | Evaluates embedding stability on the full 150-root benchmark. |
+| `ddin_exp13_pratyahara.py` | Bridge | Explores Paninian Pratyahara class membership as structural prior. |
+| `ddin_exp15_formant_grounding.py` | **Phase 4** | Continuous-Time Formant Grounding (Section 10). Employs real F1/F2 acoustic frequencies. |
+| `ddin_exp16_weighted_formant.py` | **Phase 4** | Establishes the ARI = 0.0366 unsupervised baseline mapping. |
+| `ddin_exp17_snn_pynn.py` | **Phase 5** | Neuromorphic SNN deployment (Section 11) using PyNN. Identifies the Epileptiform Synchrony Limit (~500 Hz). |
+| `ddin_exp18_snn_inhibition.py` | **Phase 5** | Explores network collapse boundaries and tests if lateral inhibition prevents the seizure state. |
+
+**To reproduce the Neuromorphic and Acoustic experiments:**
+```bash
+cd Experiments
+python ddin_exp15_formant_grounding.py
+python ddin_exp17_snn_pynn.py
+```
+*(Note: Phase 5 experiments require `pyNN` and the `Brian2` backend installed via pip).*
+
+---
+
 ## Using the embedding layer
 
 ```python
