@@ -34,3 +34,8 @@ ENV/
 *.swo
 *~
 .DS_Store
+description.txt
+PhonosemanticMeta_Description.txt
+generate_submission_v21.py
+wgukw.txt
+wgukw_v21.txt
